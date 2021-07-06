@@ -28,7 +28,7 @@ export const getRoot = (): string => {
 
   for (const route of routeList) {
     routesHTML += `
-            <li><a href="${route.url}">${route.route}</a></li>
+            <li><a href="${route.route}">${route.route.slice(1)}</a></li>
         `;
   }
   routesHTML += `</ul>
