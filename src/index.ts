@@ -8,6 +8,8 @@ import { logHandler } from "./utils/logHandler";
 import { routeList } from "./config/routeList";
 import { getRoot } from "./modules/getRoot";
 import { getFourOhFour } from "./modules/getFourOhFour";
+import { trackLinks } from "./modules/trackLinks";
+import { connectDatabase } from "./database/connectDatabase";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -20,30 +22,36 @@ Sentry.init({
 });
 
 (async () => {
+  await connectDatabase();
+
   const app = express();
 
   // mount your middleware and routes here
 
   for (const route of routeList) {
-    app.get(route.route, (req, res) => {
-      res.redirect(301, route.url);
+    app.get(route.route, async (_, res) => {
+      await trackLinks(route.route).then(() => {
+        res.redirect(307, route.url);
+      });
     });
   }
 
   const root = getRoot();
 
-  app.get("/", (_, res) => {
+  app.get("/", async (_, res) => {
+    await trackLinks("index");
     res.send(root);
   });
 
-  app.use((_, res) => {
+  app.use(async (_, res) => {
+    await trackLinks("404");
     res.status(404).send(getFourOhFour());
   });
 
   const httpServer = http.createServer(app);
 
   httpServer.listen(2080, () => {
-    logHandler.log("http", "http server listening on port 80");
+    logHandler.log("http", "http server listening on port 2080");
   });
 
   if (process.env.NODE_ENV === "production") {

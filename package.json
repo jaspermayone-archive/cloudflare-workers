@@ -1,6 +1,6 @@
 {
   "name": "links",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A basic webserver for redirecting links.",
   "main": "./prod/index.js",
   "scripts": {
@@ -25,6 +25,7 @@
     "@sentry/node": "^6.8.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "mongoose": "^5.13.2",
     "winston": "^3.3.3"
   },
   "devDependencies": {
