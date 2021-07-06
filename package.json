@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "rm -rf ./prod",
     "build": "tsc",
-    "start": "node ./prod/index.js",
+    "start": "node -r dotenv/config ./prod/index.js",
     "test": "echo 'No tests yet!'"
   },
   "repository": {
@@ -22,6 +22,7 @@
   "dependencies": {
     "@sentry/integrations": "^6.8.0",
     "@sentry/node": "^6.8.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "winston": "^3.3.3"
   },
