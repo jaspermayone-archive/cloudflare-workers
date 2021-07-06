@@ -7,6 +7,7 @@ import { RewriteFrames } from "@sentry/integrations";
 import { logHandler } from "./utils/logHandler";
 import { routeList } from "./config/routeList";
 import { getRoot } from "./modules/getRoot";
+import { getFourOhFour } from "./modules/getFourOhFour";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -31,8 +32,12 @@ Sentry.init({
 
   const root = getRoot();
 
-  app.use("/", (_, res) => {
+  app.get("/", (_, res) => {
     res.send(root);
+  });
+
+  app.use((_, res) => {
+    res.status(404).send(getFourOhFour());
   });
 
   const httpServer = http.createServer(app);
