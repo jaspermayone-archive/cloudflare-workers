@@ -3,7 +3,7 @@ import { routeList } from "../config/routeList";
 /**
  * Function to generate an HTML output for the root path.
  */
-export const getRoot = () => {
+export const getRoot = (): string => {
   let routesHTML = `
     <!DOCTYPE html>
       <html>

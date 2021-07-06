@@ -1,4 +1,4 @@
-export const getFourOhFour = () => {
+export const getFourOhFour = (): string => {
   return `
     <!DOCTYPE html>
     <html>
