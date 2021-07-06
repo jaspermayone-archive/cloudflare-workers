@@ -14,6 +14,9 @@ export const getRoot = () => {
           * {
               font-family: Courier, monospace;
           }
+          ul {
+              list-style-type: none;
+          }
           </style>
         <title>nhcarrigan links</title>
         </head>
