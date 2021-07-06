@@ -5,6 +5,8 @@ import { readFile } from "fs/promises";
 import * as Sentry from "@sentry/node";
 import { RewriteFrames } from "@sentry/integrations";
 import { logHandler } from "./utils/logHandler";
+import { routeList } from "./config/routeList";
+import { getRoot } from "./modules/getRoot";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,
@@ -16,16 +18,21 @@ Sentry.init({
   ],
 });
 
-
 (async () => {
-  
-
   const app = express();
 
   // mount your middleware and routes here
 
-  app.use("/", (req, res) => {
-    res.send("hi");
+  for (const route of routeList) {
+    app.get(route.route, (req, res) => {
+      res.redirect(301, route.url);
+    });
+  }
+
+  const root = getRoot();
+
+  app.use("/", (_, res) => {
+    res.send(root);
   });
 
   const httpServer = http.createServer(app);

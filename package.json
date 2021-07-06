@@ -4,6 +4,9 @@
   "description": "A basic webserver for redirecting links.",
   "main": "./prod/index.js",
   "scripts": {
+    "prebuild": "rm -rf ./prod",
+    "build": "tsc",
+    "start": "node ./prod/index.js",
     "test": "echo 'No tests yet!'"
   },
   "repository": {
