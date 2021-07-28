@@ -71,4 +71,8 @@ export const routeList = [
     route: "/twitter",
     url: "https://twitter.com/nhcarrigan",
   },
+  {
+    route: "/feedback",
+    url: "https://docs.google.com/forms/d/e/1FAIpQLSfJldksG5ZtA0LPkstV1rj1go5bJI7Af8EjAazjFDZbmZbBpg/viewform?usp=sf_link",
+  },
 ];
