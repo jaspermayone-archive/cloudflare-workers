@@ -2,12 +2,6 @@
 
 A super basic webserver that acts as a hub for my social links.
 
-![](https://img.shields.io/codeclimate/maintainability/nhcarrigan/links)
-![](https://img.shields.io/codeclimate/issues/nhcarrigan/links)
-![](https://img.shields.io/codeclimate/tech-debt/nhcarrigan/links)
-![](https://img.shields.io/lgtm/alerts/github/nhcarrigan/links)
-![](https://img.shields.io/lgtm/grade/javascript/github/nhcarrigan/links)
-
 ## Live Version
 
 This page is currently deployed. [View the live website.](https://links.nhcarrigan.com)
