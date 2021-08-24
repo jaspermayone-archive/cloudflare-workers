@@ -1,3 +1,9 @@
+/**
+ * This middleware is used to generate an SSR 404 page
+ * when an invalid link is requested.
+ *
+ * @returns {string} An HTML string.
+ */
 export const getFourOhFour = (): string => {
   return `
     <!DOCTYPE html>

@@ -2,6 +2,8 @@ import { routeList } from "../config/routeList";
 
 /**
  * Function to generate an HTML output for the root path.
+ *
+ * @returns {string} An HTML string.
  */
 export const getRoot = (): string => {
   let routesHTML = `
