@@ -1,3 +1,7 @@
+/**
+ * This array holds the objects which map the routes to redirects.
+ * Objects take the form of { route, redirect }.
+ */
 export const routeList = [
   {
     route: "/codepen",

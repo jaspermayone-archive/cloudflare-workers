@@ -2,6 +2,7 @@ import linkTracking from "../database/models/LinkTracking";
 
 /**
  * Function to track when a route is followed.
+ *
  * @param {string} route - The link to track.
  */
 export const trackLinks = async (route: string): Promise<void> => {
