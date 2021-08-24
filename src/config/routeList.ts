@@ -75,4 +75,12 @@ export const routeList = [
     route: "/feedback",
     url: "https://docs.google.com/forms/d/e/1FAIpQLSfJldksG5ZtA0LPkstV1rj1go5bJI7Af8EjAazjFDZbmZbBpg/viewform?usp=sf_link",
   },
+  {
+    route: "/miku",
+    url: "https://www.youtube.com/watch?v=CW9gK2_bCyk",
+  },
+  {
+    route: "/free-crypto",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  },
 ];
