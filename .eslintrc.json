@@ -22,6 +22,12 @@
     "prefer-const": "error",
     "eqeqeq": ["error", "always"],
     "curly": ["error"],
+    "require-atomic-updates": ["error"],
+    "no-var": ["error"],
+    "camelcase": ["error"],
+    "init-declarations": ["error", "always"],
+    "require-await": ["error"],
+    "no-param-reassign": ["error"],
     "jsdoc/require-jsdoc": [
       "error",
       {
