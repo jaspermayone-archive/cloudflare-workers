@@ -1,6 +1,6 @@
 {
   "name": "links",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A basic webserver for redirecting links.",
   "main": "./prod/index.js",
   "scripts": {
@@ -36,6 +36,7 @@
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-jsdoc": "36.0.7",
+    "eslint-plugin-import": "2.24.2",
     "eslint-plugin-prettier": "3.4.1",
     "prettier": "2.3.2",
     "typescript": "4.3.5"

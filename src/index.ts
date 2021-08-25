@@ -1,7 +1,7 @@
-import express from "express";
 import https from "https";
 import http from "http";
 import { readFile } from "fs/promises";
+import express from "express";
 import * as Sentry from "@sentry/node";
 import { RewriteFrames } from "@sentry/integrations";
 import { logHandler } from "./utils/logHandler";
