@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "rm -rf ./prod",
     "build": "tsc",
-    "lint": "eslint src",
+    "lint": "eslint src --max-warnings 0",
     "start": "node -r dotenv/config ./prod/index.js",
     "test": "echo 'No tests yet!'"
   },
@@ -20,6 +20,10 @@
     "url": "https://github.com/nhcarrigan/links/issues"
   },
   "homepage": "https://github.com/nhcarrigan/links#readme",
+  "engines": {
+    "node": "^16.8.0",
+    "npm": "^7.22.0"
+  },
   "dependencies": {
     "@sentry/integrations": "^6.8.0",
     "@sentry/node": "^6.8.0",
