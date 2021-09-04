@@ -1,15 +1,17 @@
-import https from "https";
-import http from "http";
 import { readFile } from "fs/promises";
-import express from "express";
-import * as Sentry from "@sentry/node";
+import http from "http";
+import https from "https";
+
 import { RewriteFrames } from "@sentry/integrations";
-import { logHandler } from "./utils/logHandler";
+import * as Sentry from "@sentry/node";
+import express from "express";
+
 import { routeList } from "./config/routeList";
-import { getRoot } from "./modules/getRoot";
-import { getFourOhFour } from "./modules/getFourOhFour";
-import { trackLinks } from "./modules/trackLinks";
 import { connectDatabase } from "./database/connectDatabase";
+import { getFourOhFour } from "./modules/getFourOhFour";
+import { getRoot } from "./modules/getRoot";
+import { trackLinks } from "./modules/trackLinks";
+import { logHandler } from "./utils/logHandler";
 
 Sentry.init({
   dsn: process.env.SENTRY_DSN,

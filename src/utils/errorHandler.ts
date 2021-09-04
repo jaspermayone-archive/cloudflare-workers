@@ -1,4 +1,5 @@
 import * as Sentry from "@sentry/node";
+
 import { logHandler } from "./logHandler";
 
 /**

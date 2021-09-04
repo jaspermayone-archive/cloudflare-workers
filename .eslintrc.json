@@ -40,13 +40,34 @@
           "FunctionDeclaration": true,
           "FunctionExpression": true,
           "MethodDefinition": true
-        }
+        },
+        "publicOnly": true
       }
     ],
     "jsdoc/require-description-complete-sentence": "error",
     "import/first": "error",
     "import/exports-last": "error",
     "import/newline-after-import": "error",
-    "import/order": "error"
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type",
+          "unknown"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
   }
 }
