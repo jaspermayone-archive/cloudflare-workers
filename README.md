@@ -1,10 +1,6 @@
 # Links
 
-A super basic webserver that acts as a hub for my social links.
-
-## Live Version
-
-This page is currently deployed. [View the live website.](https://links.nhcarrigan.com)
+Script for a Cloudflare Worker to handle link redirects.
 
 ## Feedback and Bugs
 
