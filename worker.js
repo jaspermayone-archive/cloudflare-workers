@@ -9,6 +9,8 @@ const redirectMap = new Map([
   ["twitter", "https://twitter.com/jdogcoder"],
   ["pinterest", "https://www.pinterest.com/jdogcoder/"],
   ["youtube", "https://www.youtube.com/channel/UCRiTaSZTy9suw8cAABxlVUw"],
+  ["cyaneus", "https://cyaneus.co"],
+  ["heptagram", "https://heptagram.xyz"]
 ]);
 
 async function handleRequest(req) {
