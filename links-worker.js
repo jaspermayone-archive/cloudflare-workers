@@ -1,5 +1,5 @@
 const redirectMap = new Map([
-  ["discord", "https://discord.gg/HSupF99kpq"],
+  ["discord", "https://discord.gg/PD3kuBzZ6p"],
   ["github", "https://github.com/j-dogcoder"],
   ["instagram", "https://instagram.com/jasper_mayone"],
   ["linkedin", "https://www.linkedin.com/in/jasper-mayone-70033b164/"],
@@ -10,6 +10,7 @@ const redirectMap = new Map([
   ["pinterest", "https://www.pinterest.com/jdogcoder/"],
   ["youtube", "https://www.youtube.com/channel/UCRiTaSZTy9suw8cAABxlVUw"],
   ["cyaneus", "https://cyaneus.co"],
+  ["project-universe", "https://github.com/Project-Universe"]
 ]);
 
 async function handleRequest(req) {
@@ -17,7 +18,7 @@ async function handleRequest(req) {
   if (location) {
     return Response.redirect(location, 301);
   }
-  return Response.redirect("https://www./404.html", 301);
+  return Response.redirect("https://jaspermayone.com/404.html", 301);
 }
 
 addEventListener("fetch", async (event) => {
